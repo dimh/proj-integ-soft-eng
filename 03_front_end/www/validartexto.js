@@ -3,11 +3,7 @@ function validar (){
     metrosc = document.getElementById("metrosc").value;
     tipodesuperficie = document.getElementById("tipodesuperficie").value;
     horario = document.getElementById("horario").value;
-    console.log(metrosc);
-    console.log(tipodesuperficie);
-    console.log(horario);
 
-    
     //validacion para que sea solo numero
 
     if (metrosc.length==0 || /^\s+$/.test(metrosc.length) || isNaN(metrosc)){

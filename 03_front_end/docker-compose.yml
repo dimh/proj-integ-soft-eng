@@ -1,0 +1,9 @@
+version: "3"
+services:
+  local-www:
+    build:
+      context: .
+    volumes:
+      - ./www:/usr/share/nginx/html
+    ports:
+      - "8080:80"
