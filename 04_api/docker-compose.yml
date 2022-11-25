@@ -1,0 +1,9 @@
+version: "3"
+services:
+  local-model-api:
+    build:
+      context: .
+    volumes:
+      - ./api.py:/opt/model_app/api.py
+    ports:
+      - "8000:80"
