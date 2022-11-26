@@ -47,9 +47,9 @@ formElement.addEventListener("submit", (event) => {
     console.log(data)
     // var div = document.getElementById('response_api');
     // div.innerHTML = data;
-    let text = "<table border='0' style='border:1px solid black;margin-left:auto;margin-right:auto;'>"
+    let text = "<table style='border:0px solid black;margin-left:auto;margin-right:auto;'>"
     for (let x in data) {
-      text += "<tr><td><b>" + x + ":</b></td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td><td>" + data[x] + "</td></tr>";
+      text += "<tr><td><b>" + x + ":</b></td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td><td>" + data[x] + "</td></tr><tr></tr>";
     }
     text += "</table>"
     document.getElementById("response_api").innerHTML = text;

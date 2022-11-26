@@ -91,7 +91,14 @@ async def predict(request):
         new_payload = await get_df(payload, range_age)
         if new_payload is not None:
             response = model.predict(new_payload)
-            response_payload[description] = response[0]
+            # print(type(response[0]))
+            # print(response[0])
+            v = int(response[0])
+            # print(v)
+            if v < 1:
+                response_payload[description] = 1
+            else:
+                response_payload[description] = v
         else:
             return json_response({'error': 'data not valid'})
     print(response_payload)
